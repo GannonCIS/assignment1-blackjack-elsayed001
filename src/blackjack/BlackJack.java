@@ -16,6 +16,9 @@ public class BlackJack {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Deck myDeck = new Deck();
+        myDeck.printDeck();
+        
     }
     
 }
