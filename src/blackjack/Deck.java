@@ -19,10 +19,12 @@ public class Deck {
 
     public Deck() {
         initDeck();
+        shuffle();
 
     }
 
-    private void initDeck() {
+    private void initDeck(){
+
      int index = 0;
         for(int s = 0; s < suits.length; s++){
             for(int r = 0; r < ranks.length; r++){
@@ -35,6 +37,15 @@ public class Deck {
     }
 
     private void shuffle() {
+        for(int i = 0; i < myCards.length; i++){
+            Card temp = myCards[i];
+            int rand = (int)(Math.random()*52);
+            myCards[i] = myCards[rand];
+            myCards[rand] = temp;
+            
+            
+        }
+        
 
     }
 // printDeck is for testing only -- delete me
@@ -48,5 +59,6 @@ public class Deck {
     public Card dealCard() {
 
         return null; // do not forget to change this!!!!!!!!!!!!!!!!!!!
+        
     }
 }
