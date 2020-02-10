@@ -30,28 +30,37 @@ public class Hand {
            numOfCards++;
          
            try{
-           score += Integer.parseInt(newCard.RANK);
+                score += Integer.parseInt(newCard.RANK);
            }catch(java.lang.NumberFormatException ex){
-               if(newCard.RANK.equals("ACE")){
+                if(newCard.RANK.equals("ACE")){
                    score += 1;
-               }else{
+                }else{
                    score += 10;
-                   
-               }
-                   
-               }
+                }
            }
-          
-       
+       }
    }
-}
-   
+               
+               
     public void printHand(){
-         for (int i = 0; i < myCards.length; i++){
+        for (int i = 0; i < numOfCards; i++){
             System.out.println(myCards[i].RANK + "of" + myCards[i].SUIT);
-            
-            
-        
+        }
     }
-       } 
+}
+
+
+         
+                
+            
+      
+         
+            
+                
+            
+    
+  
+        
+    
+       
     
